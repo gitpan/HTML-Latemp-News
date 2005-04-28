@@ -1,0 +1,24 @@
+--- #YAML:1.0
+name: HTML-Latemp-News
+version: 0.1.3
+license: bsd
+distribution_type: module
+requires:
+  CGI: 0
+  Class::Accessor: 0
+  Test::More: 0
+  XML::RSS: 0
+recommends: {}
+build_requires: {}
+conflicts: {}
+provides:
+  HTML::Latemp::News:
+    file: lib/HTML/Latemp/News.pm
+    version: 0.1.3
+  HTML::Latemp::News::Base:
+    file: lib/HTML/Latemp/News.pm
+    version: 0.1.3
+  HTML::Latemp::News::Item:
+    file: lib/HTML/Latemp/News.pm
+    version: 0.1.3
+generated_by: Module::Build version 0.21
