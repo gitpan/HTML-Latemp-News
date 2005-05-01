@@ -10,7 +10,7 @@ web frameworks)
 
 =cut
 
-our $VERSION = '0.1.3';
+our $VERSION = '0.1.4';
 
 =head1 SYNOPSIS
 
@@ -385,22 +385,35 @@ This generates HTML for the news page.
 
 =cut
 
-sub get_news_box
+sub get_news_box_contents
 {
     my $self = shift;
     my (%args) = (@_);
-
+    
     my $html = "";
-
-    $html .= qq{<div class="news">\n};
-    $html .= qq{<h3>News</h3>\n};
-    $html .= qq{<ul>\n};
     foreach my $item (reverse(@{$self->get_items_to_include(\%args)}))
     {
         $html .= "<li><a href=\"" . 
             $self->get_item_rel_url($item) . "\">" . 
         CGI::escapeHTML($item->title()) . "</a></li>\n";
     }
+    return $html;
+}
+
+
+sub get_news_box
+{
+    my $self = shift;
+
+    my $html = "";
+
+    $html .= qq{<div class="news">\n};
+    $html .= qq{<h3>News</h3>\n};
+    $html .= qq{<ul>\n};
+    $html .=
+        $self->get_news_box_contents(
+            @_
+        );
     $html .= qq{<li><a href="./news/">More&hellip;</a></li>};
     $html .= qq{</ul>\n};
     $html .= qq{</div>\n};
