@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: HTML-Latemp-News
-version: 0.1.4
+version: 0.1.5
 license: bsd
 distribution_type: module
 requires:
@@ -14,11 +14,11 @@ conflicts: {}
 provides:
   HTML::Latemp::News:
     file: lib/HTML/Latemp/News.pm
-    version: 0.1.4
+    version: 0.1.5
   HTML::Latemp::News::Base:
     file: lib/HTML/Latemp/News.pm
-    version: 0.1.4
+    version: 0.1.5
   HTML::Latemp::News::Item:
     file: lib/HTML/Latemp/News.pm
-    version: 0.1.4
+    version: 0.1.5
 generated_by: Module::Build version 0.21

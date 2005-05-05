@@ -10,7 +10,7 @@ web frameworks)
 
 =cut
 
-our $VERSION = '0.1.4';
+our $VERSION = '0.1.5';
 
 =head1 SYNOPSIS
 
@@ -26,18 +26,31 @@ our $VERSION = '0.1.4';
         .
         .
         .
+        {
+            'title' => "Changes of 18-April-2005",
+            'id' => "changes-2005-04-18",
+            'description' => q{Around 18 April, 2005, Jane's Site has seen a
+                lot of changes. Click the link for details on them.},
+            'date' => "2005-04-18",
+            'author' => "Jane Smith",
+            'category' => "Jane's Site",
+        },
+        .
+        .
+        .
     );
 
     my $news_manager = 
         HTML::Latemp::News->new(
             'news_items' => \@news_items,
             'title' => "Better SCM News",
-            'link' => "http://better-scm.berlios.de/",
+            'link' => "http://janes-site.tld/",
             'language' => "en-US",
-            'copyright' => "Copyright by Shlomi Fish, (c) 2005",
-            'webmaster' => "Shlomi Fish <shlomif\@iglu.org.il>",
-            'managing_editor' => "Shlomi Fish <shlomif\@iglu.org.il>",
-            'description' => "News of the Better SCM Site - a site for Version Control and Source Configuration Management news and advocacy",
+            'copyright' => "Copyright by Jane Smith, (c) 2005",
+            'webmaster' => "Jane Smith <jane@janes-site.tld>",
+            'managing_editor' => "Jane Smith <jane@janes-site.tld>",
+            'description' => "News of Jane's Site - a personal site of " . 
+                "Jane Smith",
         );
 
     $news_manager->generate_rss_feed(
