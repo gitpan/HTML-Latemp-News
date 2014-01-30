@@ -1,25 +1,33 @@
 ---
-name: HTML-Latemp-News
-version: 0.1.7
+abstract: 'News Maintenance Module for Latemp (and possibly other'
 author:
-  - Shlomi Fish <shlomif@iglu.org.il>
-abstract: |-
-  News Maintenance Module for Latemp (and possibly other 
-  web frameworks)
-license: bsd
-resources:
-  license: http://www.opensource.org/licenses/bsd-license.php
+  - 'Shlomi Fish <shlomif@iglu.org.il>'
+build_requires: {}
+configure_requires:
+  Module::Build: 0.36
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4007, CPAN::Meta::Converter version 2.132830'
+license: mit
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: HTML-Latemp-News
+provides:
+  HTML::Latemp::News:
+    file: lib/HTML/Latemp/News.pm
+    version: v0.1.8
+  HTML::Latemp::News::Base:
+    file: lib/HTML/Latemp/News.pm
+  HTML::Latemp::News::Item:
+    file: lib/HTML/Latemp/News.pm
 requires:
   CGI: 0
   Class::Accessor: 0
   Test::More: 0
   XML::RSS: 0
-provides:
-  HTML::Latemp::News:
-    file: lib/HTML/Latemp/News.pm
-    version: 0.1.7
-  HTML::Latemp::News::Base:
-    file: lib/HTML/Latemp/News.pm
-  HTML::Latemp::News::Item:
-    file: lib/HTML/Latemp/News.pm
-generated_by: Module::Build version 0.2703
+  perl: 5.008
+  strict: 0
+  warnings: 0
+resources:
+  license: http://www.opensource.org/licenses/mit-license.php
+version: v0.1.8
